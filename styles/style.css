@@ -84,20 +84,12 @@ ol {
   white-space: nowrap;
 }
 
-.search-form__fieldset {
-  /* сброс рамки */
-  border: none;
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-}
-
 .button {
-  border: 1px solid #FFFFFF;
+  border: 1px solid #fff;
   height: 34px;
   border-width: 1px;
   background-color: transparent;
-  color: #FFFFFF;
+  color: #fff;
   text-align: center;
   cursor: pointer;
   font-family: 'Fira Sans Condensed', sans-serif;
@@ -113,8 +105,6 @@ ol {
 
 .button:active {
   background-color: #545050;
-  color: #FFFFFF;
-  text-decoration: none;
 }
 
 .button:focus {
@@ -136,6 +126,14 @@ ol {
   margin-top: 30px;
 }
 
+.search-form__fieldset {
+  /* сброс рамки */
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
 .search-form__fieldset-title {
   font-size: 18px;
   line-height: 100%;
@@ -145,7 +143,7 @@ ol {
 .search-form__label { 
   /* элементы фэйлдсет */
   display: flex;
-  align-items: start;
+  align-items: center;
   width: fit-content;
   gap: 5px;
   background-color: transparent;
@@ -163,7 +161,7 @@ ol {
 
 .search-form__label:has(.search-form__textfield:focus-visible) {
   border: none;
-  outline: 1px solid white;
+  outline: 1px solid #fff;
 } 
 
 .search-form__textfield { 
@@ -171,12 +169,12 @@ ol {
   appearance: none;
   border: none;
   outline: none;
-  border-top: 1px solid #ffffff;
-  border-bottom: 1px solid #ffffff;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
   background-color: transparent;
-  color: white;
+  color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
-  font-weight: none;
+  font-weight: normal;
   font-size: 18px;
   line-height: 100%;
   width: 225px;
@@ -194,7 +192,7 @@ ol {
   position: relative;
   width: 19px;
   height: 19px;
-  border: 1px solid white;
+  border: 1px solid #fff;
   display: inline-block;
 }
 
@@ -206,7 +204,7 @@ ol {
   left: 1px;
   width: 15px;
   height: 15px;
-  background-color: white;
+  background-color: #fff;
   display: none;
 }
 
@@ -225,6 +223,7 @@ ol {
   height: 100%;
   width: 100%;
   object-fit: cover; /* Заполняет контейнер, обрезая лишнее */
+  object-position: center;
   cursor: pointer;
 }
 
@@ -253,11 +252,8 @@ ol {
   /*элементы внутри блока с видеокарточками */
   display: flex;
   flex-direction:row;
-  color: #FFFFFF;
+  color: #fff;
   background-color: transparent;
-  /*justify-content: space-between;
-  align-items: center;
-  padding: 2px 4px;*/
 }
 
 .content__card-link { 
@@ -279,7 +275,7 @@ ol {
   /* подзаголовок видеокарточки с ... */
   font-family: 'Oswald', sans-serif;
   font-size: 30px;
-  line-height: 30px;
+  line-height: 40px;
   text-transform: uppercase;
   overflow: hidden;
   white-space: nowrap;
@@ -311,14 +307,16 @@ ol {
 }
 
 .content__card-link_current {
-  background-color:#545050;
+  background-color:transparent;
+}
+
+.content__card-link_current:active {
+  background-color: #545050;
 }
 
 .content__card-link:hover .content__video-card-title,
 .content__card-link:hover .content__video-card-description {
   text-decoration: underline;
-  /*text-underline-offset: 4px;
-  justify-content: space-between;*/
 }
 
 .content__card-link:focus {
@@ -326,7 +324,7 @@ ol {
 }
 
 .content__card-link:focus-visible {
-  outline: 1px solid white;
+  outline: 1px solid #fff;
   outline-offset: -1px;
   background-color: transparent;
 }
